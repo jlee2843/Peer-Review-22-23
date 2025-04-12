@@ -1,0 +1,17 @@
+pandas
+numpy
+matplotlib
+seaborn
+scikit-learn
+statsmodels
+networkx
+xgboost
+geopandas
+folium
+weasyprint
+streamlit
+transformers
+torch
+pytest
+causalinference
+linearmodels
