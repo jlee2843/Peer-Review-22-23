@@ -1,53 +1,77 @@
-# 🧠 Project Memory Summary
+# Peer Review Project: Comprehensive Pipeline Summary (ChatGPT model 4.5)
 
-## 📌 Project Focus
+## Project Title:
 
-You’re building a comprehensive pipeline to analyze the **impact of peer review on academic publishing**, especially
-comparing **preprints vs. published versions**. This project includes:
+**"Publish or Perish: Quantifying the Impact of Peer Review on Academic Manuscripts"**
 
-- **Textual comparison**: semantic similarity, thematic shifts, structural changes
-- **Metadata tracking**: citations, figures, references, author details, ORCID verification
-- **Metric tracking**:
-    - Statistical rigor (e.g., confidence intervals, statistical power)
-    - Authorship changes and career stage
-    - Reviewer sentiment and tone
-    - References added/removed
-    - Sentiment shift
-    - Citation and Altmetric impact
-    - Label shift (classification drift)
-    - Review quality and timing
-    - Longitudinal version tracking
-    - Peer-Review Effect Score (PRES)
+## Project Description:
 
-## 🛠️ Pipeline & Tools
+The project aims to quantify and analyze how peer review influences academic publications, tracking changes between
+preprint and published versions. Key research questions include:
 
-- **Parsing PDFs**: OpenParse (preferred), spaCy, OCR fallback
-- **Similarity Analysis**: Sentence-BERT (semantic), difflib, fuzzywuzzy/rapidfuzz (for names, text diffs)
-- **Metadata APIs**: CrossRef, Semantic Scholar, BioRxiv, arXiv, EuropePMC, Unpaywall, ORCID
-- **Visualization & Dashboarding**: Streamlit
-- **Clustering & Topic Modeling**: BERTopic
-- **Classification & ML**: Label classifiers, XGBoost, time-series drift
-- **Statistical Analysis**: IVs, DiD, multivariate, meta-analysis, geospatial
-- **Monitoring**: Prometheus + Grafana
-- **ETL Orchestration**: Apache Airflow
-- **CI/CD & Testing**: Pytest, GitHub Actions, test coverage reports
+- Does peer review improve scientific rigor or limit academic freedom?
+- How does peer review impact manuscript content, citations, authorship, and thematic classification?
+- How do impacts vary across academic disciplines, regions, funding mechanisms, journals, and author career stages?
 
-## 📦 Automation Features
+## Project Goals:
 
-- Generates:
-    - PRES score and report (PDF + CSV)
-    - Confusion matrices and Sankey diagrams
-    - Full version ZIP archive with logs, reports, metrics
-- Upload options:
-    - Google Drive (by folder ID)
-    - Dropbox (auto-journal-folder naming)
-    - Email delivery with `.env` for credentials
-    - Telegram notifications
+1. **Textual Comparison** of preprints (BioRxiv, ArXiv, MedRxiv) vs. published manuscripts.
+2. **Quantify and Visualize Manuscript Changes** (semantic, thematic, structural).
+3. **Analyze Reviewer Sentiment and Manuscript Evolution**.
+4. **Measure Impact of Review Process** using rigorous statistical methodologies and NLP tools.
+5. **Develop a Composite Peer-Review Effect Score (PRES)** for comparative insights.
 
-## 🎯 Current Priorities
+## Data Sources:
 
-- Pipeline recoding and restructuring (object-oriented, modular)
-- Rebuild test suite in `pytest` with coverage
-- Add full project documentation
-- Finalize download + packaging logic for all outputs
-- Identify and optimize CPU- vs. I/O-bound tasks (considering Spark, threading, asyncio)
+- PDF Manuscripts (Preprints vs. Published Articles)
+- APIs & Metadata: CrossRef, BioRxiv, ArXiv, Semantic Scholar, EuropePMC, Unpaywall, ORCID
+- Reviewer Comments from platforms (eLife, PeerJ, F1000Research)
+- Altmetric & Citation Data (Semantic Scholar API, Altmetrics API)
+
+## Analytical Pipeline:
+
+1. Data Acquisition & Parsing
+2. Textual and Semantic Analysis
+3. Comparison and Diffing Logic
+4. Reviewer Interaction Analysis
+5. Longitudinal Tracking
+6. Metadata and Authorship Tracking
+7. Statistical & Advanced Analysis
+
+## Automation & Infrastructure:
+
+- ETL and Automation (Apache Airflow)
+- Monitoring and Alerting (Prometheus, Grafana)
+- Continuous Integration and Testing (Pytest, GitHub Actions)
+- Secure Credentials Management (AWS Secrets Manager, .env)
+
+## Visualization and Dashboards:
+
+- Interactive Streamlit Dashboard with comprehensive filters and tabs
+
+## Reporting and Output:
+
+- Exportable Data (CSV/Excel, JSON)
+- PDF Reports
+- Bundling and Distribution (email, Google Drive, Dropbox, Telegram notifications)
+
+## Documentation and Project Management:
+
+- Full structured documentation
+- Object-oriented Python codebase
+- Benchmarking and tracking
+
+## Infrastructure and Performance Optimization:
+
+- Apache Spark, threading, multiprocessing, asyncio based optimizations
+
+## Additional Analysis and Metrics Added:
+
+- Publication Timing Metrics
+- Reviewer Interaction Quality Metrics
+- Longitudinal Tracking
+
+## Current Pipeline Implementation Status:
+
+Fully integrated pipeline combining Data Management, Statistical Modeling, NLP, Advanced Analyses, Automation,
+Visualization, Reporting, and Documentation.
